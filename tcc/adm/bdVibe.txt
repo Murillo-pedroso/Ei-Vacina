@@ -1,0 +1,26 @@
+create database bdVibe;
+use bdVibe;
+
+create table tbLogin(
+idLogin int primary key auto_increment
+,dtCadastro date
+,Usuario varchar (10) not null
+,Senha varchar (20) not null
+,Email varchar (100)
+,NomeC varchar (60)
+);
+
+
+drop table tbLogin;
+alter table tbLogin drop column Endereco; 
+
+alter table tbLogin add Email varchar(100);
+alter table tbLogin add NomeC varchar(60);
+
+select * from tbLogin;
+/*Tabela Login*/
+
+insert into tbLogin values(null,curdate(),'Bruno','1234','bruno@gmail','Bruno da Silva Batista');
+insert into tbLogin values(null,curdate(),'','','bruno@gmail','Bruno da Silva Batista');
+drop table tbLogin;
+select * from tbLogin where Usuario = 'LuxArcadia' and Senha = 'naoseiasenha'; 

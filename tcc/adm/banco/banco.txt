@@ -1,0 +1,170 @@
+ create database bdVacina;
+use bdVacina;
+
+create table tbPolio(
+	
+	idPolio int primary key auto_increment,
+    pdose varchar (20),
+    sdose varchar (20),
+    tdose varchar (20),
+    preforco varchar (20),
+    sreforco varchar (202),
+    cpf varchar (11)
+
+);
+select * from tbPolio;
+drop table tbPolio;
+
+create table tbTripl(
+	
+	idTripl int primary key auto_increment,
+    pdose varchar (20),
+    sdose varchar (20),
+    tdose varchar (20),
+    preforco varchar (20),
+    sreforco varchar (202),
+    cpf varchar (11)
+
+);
+select * from tbTripl;
+drop table tbTripl;
+
+create table tbbcg(
+	
+	idBcg int primary key auto_increment,
+    pdose varchar (20),
+    sdose varchar (20),
+    tdose varchar (20),
+    preforco varchar (20),
+    sreforco varchar (202),
+    cpf varchar (11)
+
+);
+select * from tbbcg;
+drop table tbbcg;
+
+create table tbTox(
+	
+	idTox int primary key auto_increment,
+    pdose varchar (20),
+    sdose varchar (20),
+    tdose varchar (20),
+    preforco varchar (20),
+    sreforco varchar (202),
+    cpf varchar (11)
+
+);
+
+select * from tbTox;
+drop table tbTox;
+
+create table tbDupla(
+	
+	idDupla int primary key auto_increment,
+    pdose varchar (20),
+    sdose varchar (20),
+    tdose varchar (20),
+    preforco varchar (20),
+    sreforco varchar (202),
+    cpf varchar (11)
+
+);
+select * from tbDupla;
+drop table tbDupla;
+
+create table tboutrap(
+	
+	idOutrap int primary key auto_increment,
+    pdose varchar (20),
+    sdose varchar (20),
+    tdose varchar (20),
+    preforco varchar (20),
+    sreforco varchar (202),
+    cpf varchar (11)
+
+);
+select * from tboutrap;
+drop table tboutrap;
+
+create table tboutras(
+	
+	idOutras int primary key auto_increment,
+    pdose varchar (20),
+    sdose varchar (20),
+    tdose varchar (20),
+    preforco varchar (20),
+    sreforco varchar (202),
+    cpf varchar (11)
+
+);
+select * from tboutras;
+drop table tboutras;
+
+create table tboutrat(
+	
+	idOutrat int primary key auto_increment,
+    pdose varchar (20),
+    sdose varchar (20),
+    tdose varchar (20),
+    preforco varchar (20),
+    sreforco varchar (202),
+    cpf varchar (11)
+
+);
+select * from tboutrat;
+drop table tboutrat;
+
+insert into tbVacina values(50407389865,"Bruno da Silva Batista","Pendente","brunosilvabtst","Pimentinha1212");
+insert into tbVacina values(58746982012,"Rodrigo da costa Silva","Pendente","Rodrigocosta555","84146545");
+/*
+update tbVacina set confirmacao = 'OK' where cpf = '50407389865';
+update tbVacina set confirmacao = 'Pendente' where cpf = '50407389865';
+*/
+
+create table tbLogin(
+cpf  varchar (11) primary key
+,dtCadastro date
+,NomeC varchar (60) not null
+,dtNasc date not null
+,Email varchar (100) not null
+,Senha varchar (60) not null
+); 
+
+
+drop table tbLogin;
+alter table tbLogin drop column Endereco; 
+
+alter table tbLogin add Email varchar(100);
+alter table tbLogin add NomeC varchar(60);
+
+select * from tbLogin;
+select * from tbLogin;
+/*Tabela Login*/
+
+insert into tbLogin values(null,curdate(),'Bruno','1234','bruno@gmail','Bruno da Silva Batista');
+insert into tbLogin values(null,curdate(),'','','bruno@gmail','Bruno da Silva Batista');
+drop table tbLogin;
+select * from tbLogin where Usuario = 'LuxArcadia' and Senha = 'naoseiasenha'; 
+
+create table tbProdutos(
+
+idRem int primary key auto_increment,
+nomeRem varchar(40),
+quant int,
+arquivo Longblob
+);
+
+select * from tbProdutos;
+
+drop table tbProdutos;
+
+create table tbReceita(
+idRec int primary key auto_increment,
+cpf varchar(11),
+qntd int,
+idRem int,
+nomeRem varchar(40),
+codIdentifi varchar(10)
+);
+drop table tbReceita;
+select * from tbReceita;
