@@ -113,7 +113,7 @@ create table tboutrat(
 );
 select * from tboutrat;
 drop table tboutrat;
-
+SELECT sreforco FROM tboutrat WHERE cpf= '33333333333';
 insert into tbVacina values(50407389865,"Bruno da Silva Batista","Pendente","brunosilvabtst","Pimentinha1212");
 insert into tbVacina values(58746982012,"Rodrigo da costa Silva","Pendente","Rodrigocosta555","84146545");
 /*
@@ -216,6 +216,58 @@ estado varchar(2),
 usuario varchar(8),
 senha varchar(4)
 );
-insert into tbMedica values('0000000','mumu','murillomonteirop@gmail.com',2002-04-21,'sp','admin','admin');
+insert into tbMedica values('0000000','mumu','murillomonteirop@gmail.com','2002-04-21','sp','admin','admin');
 select*from tbMedica;
 drop table tbmedica;
+
+create table tbHospital(
+idHospital int primary key auto_increment,
+nomeHosp varchar(40),
+enderecoHosp varchar(40)
+);
+  
+  select * from tbHospital;
+  
+insert into tbHospital values (null,"Hospital A","Endereço A");
+insert into tbHospital values (null,"Hospital B","Endereço B");
+insert into tbHospital values (null,"Hospital C","Endereço C");
+  
+create table tbModalidade(
+idModal int primary key auto_increment,
+nomeModal varchar(40)
+);
+
+insert into tbModalidade values (null,"Oftalmologista");
+insert into tbModalidade values (null,"Otorrino");
+insert into tbModalidade values (null,"Pediatria");
+insert into tbModalidade values (null,"Cardiologista");
+insert into tbModalidade values (null,"Reumatologista");
+insert into tbModalidade values (null,"Dermatologista");
+
+create table tbConsulta(
+idConsulta int primary key auto_increment,
+cpfCliente varchar(11),
+dataConsulta date,
+nomeHosp varchar(40),
+nomeModal varchar(40),
+horarioConsulta time
+);
+
+select*from tbConsulta;
+
+create table tbOutrasvacinas(
+idVacina int primary key auto_increment,
+nomeVacina varchar (40)
+
+);
+ 
+ select * from tbOutrasvacinas;
+ 
+insert into tbOutrasvacinas values(null,"Febre Amarela");
+insert into tbOutrasvacinas values(null,"HPV");
+insert into tbOutrasvacinas values(null,"Tetra Viral");
+insert into tbOutrasvacinas values(null,"Hepatite A");
+insert into tbOutrasvacinas values(null,"Poliomelite");
+insert into tbOutrasvacinas values(null,"Dengue");
+insert into tbOutrasvacinas values(null,"Influenza");
+insert into tbOutrasvacinas values(null,"dTpa");
