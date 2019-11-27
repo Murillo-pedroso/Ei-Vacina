@@ -1,3 +1,9 @@
+
+<style>
+  
+
+</style>
+
 <?php 
 require('conexao.php');
 require('ope.php');
@@ -47,6 +53,8 @@ $login_cookie = $_COOKIE['cpf'];
 .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
+
+
 </style>
     
     </head>
@@ -153,9 +161,74 @@ $login_cookie = $_COOKIE['cpf'];
 ?>
     
 
-      <td class="tg-0lax"></td>
-      <td class="tg-0lax"></td>
-      <td class="tg-0lax"></td>
+      
+        <?php
+
+         $tabela = "tboutrap";
+          $coluna = "pdose";
+          $selecta = "seleoutrap4";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          ?>   
+    
+          <input type="submit" name="cadastrar">
+
+     </form> 
+    </td>
+     
+         <?php
+
+          $tabela = "tboutras";
+          $coluna = "pdose";
+          $selecta = "seleoutras4";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          ?>  
+
+          <input type="submit" name="cadastrar">
+
+     </form> 
+      </td>
+     
+         <?php
+
+          $tabela = "tboutrat";
+          $coluna = "pdose";
+          $selecta = "seleoutrat4";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          ?>  
+          <input type="submit" name="cadastrar">
+
+     </form> 
+      </td>
     </tr>
     <tr>
     <td class="tg-baqh">2ª</td>
@@ -211,9 +284,73 @@ $login_cookie = $_COOKIE['cpf'];
 ?>
 
 
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+        <?php
+          $tabela = "tboutrap";
+          $coluna = "sdose";
+          $selecta = "seleoutrap3";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          ?>   
+       <input type="submit" name="cadastrar">
+
+     </form> 
+
+    </td>
+    
+        <?php
+          $tabela = "tboutras";
+          $coluna = "sdose";
+          $selecta = "seleoutras3";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          ?>   
+       <input type="submit" name="cadastrar">
+
+     </form> 
+
+    </td>
+    
+        <?php
+
+           $tabela = "tboutrat";
+          $coluna = "sdose";
+          $selecta = "seleoutrat3";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          ?>   
+      
+          <input type="submit" name="cadastrar">
+
+     </form> 
+    </td>
   </tr>
   <tr>
     <td class="tg-baqh">3ª</td>
@@ -270,9 +407,90 @@ $login_cookie = $_COOKIE['cpf'];
 
 
 
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    
+        <?php
+
+           $tabela = "tboutrap";
+          $coluna = "tdose";
+          $selecta = "seleoutrap2";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          ?>   
+      
+           <input type="submit" name="cadastrar">
+
+     </form> 
+    </td>
+    
+        <?php
+
+          $tabela = "tboutras";
+          $coluna = "tdose";
+          $selecta = "seleoutras2";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          ?>   
+      <input type="submit" name="cadastrar">
+
+     </form> 
+
+    </td>
+  
+        <?php
+          
+        $consultaoutrat = mysqli_query ($conn, "SELECT tdose FROM tboutrat WHERE cpf= '$login_cookie'");
+
+      
+        $resultTbLogin = mysqli_fetch_array($consultaoutrat, MYSQLI_ASSOC)['tdose']; 
+        
+                 
+
+         if (isset($resultTbLogin) ) {
+                    
+                     echo"<td>".$resultTbLogin."</td>";
+                  
+          }else{
+          $tabela = "tboutrat";
+          $coluna = "tdose";
+          $selecta = "seleoutrat2";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+
+           echo" <input type='submit' name='cadastrar'>
+
+     </form>";
+        }
+          ?>   
+      
+         
+    </td>
   </tr>
   <tr>
     <td class="tg-baqh">Reforço</td>
@@ -329,9 +547,122 @@ $login_cookie = $_COOKIE['cpf'];
 
 
 
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    
+        <?php
+
+        $consultaoutrap = mysqli_query ($conn, "SELECT preforco FROM tboutrap WHERE cpf= '$login_cookie'");
+
+      
+        $resultTbLogin = mysqli_fetch_array($consultaoutrap, MYSQLI_ASSOC)['preforco']; 
+        
+                 
+
+         if (isset($resultTbLogin) ) {
+                    
+                     echo"<td>".$resultTbLogin."</td>";
+                  
+          }else{
+
+           $tabela = "tboutrap";
+          $coluna = "preforco";
+          $selecta = "seleoutrap1";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+          echo" <input type='submit' name='cadastrar'>
+
+     </form>";
+        }
+          ?>   
+      
+
+    </td>
+   
+        <?php
+         
+         $consultaoutras = mysqli_query ($conn, "SELECT preforco FROM tboutras WHERE cpf= '$login_cookie'");
+
+      
+        $resultTbLogin = mysqli_fetch_array($consultaoutras, MYSQLI_ASSOC)['preforco']; 
+        
+                 
+
+         if (isset($resultTbLogin) ) {
+                    
+                     echo"<td>".$resultTbLogin."</td>";
+                  
+          }else{
+
+         $tabela = "tboutras";
+          $coluna = "preforco";
+          $selecta = "seleoutras1";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+
+           echo" <input type='submit' name='cadastrar'>
+
+     </form>";
+        }
+          ?>   
+      
+            
+    </td>
+    
+        <?php
+         
+        $consultaoutrat = mysqli_query ($conn, "SELECT preforco FROM tboutrat WHERE cpf= '$login_cookie'");
+
+      
+        $resultTbLogin = mysqli_fetch_array($consultaoutrat, MYSQLI_ASSOC)['preforco']; 
+        
+                 
+
+         if (isset($resultTbLogin) ) {
+                    
+                     echo"<td>".$resultTbLogin."</td>";
+                  
+          }else{
+         $tabela = "tboutrat";
+          $coluna = "preforco";
+          $selecta = "seleoutrat1";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+           echo" <input type='submit' name='cadastrar'>
+
+     </form>";
+
+        }
+          ?>   
+       
+
+
+    </td>
   </tr>
   <tr>
     <td class="tg-baqh">Reforço</td>
@@ -343,7 +674,7 @@ $login_cookie = $_COOKIE['cpf'];
       
       while ($resultTbLogin = mysqli_fetch_array($consultaPolio, MYSQLI_ASSOC)){  
         
-                   echo"<td><a href='vacinas/polio/sreforco.php?cpf=$resultTbLogin[cpf]'>{$resultTbLogin['sreforco']}</a></td>";
+                   echo"<td><a href='vacinas/polio/sreforco.php?cpf=$resultTbLogin[cpf]' class='white'>{$resultTbLogin['sreforco']}</a></td>";
                            
         }         
                 
@@ -378,7 +709,7 @@ $login_cookie = $_COOKIE['cpf'];
       
       while ($resultTbLogin = mysqli_fetch_array($consultaDupla, MYSQLI_ASSOC)){  
         
-                   echo"<td><a href='vacinas/dupla/sreforco.php?cpf=$resultTbLogin[cpf]'>{$resultTbLogin['sreforco']}</a></td>";
+                   echo"<td class='white'><a href='vacinas/dupla/sreforco.php?cpf=$resultTbLogin[cpf]'>{$resultTbLogin['sreforco']}</a></td>";
 
 
       }
@@ -388,9 +719,132 @@ $login_cookie = $_COOKIE['cpf'];
 ?>
 
 
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    
+        <?php
+
+        $consultaoutrap = mysqli_query ($conn, "SELECT sreforco FROM tboutrap WHERE cpf= '$login_cookie'");
+
+      
+        $resultTbLogin = mysqli_fetch_array($consultaoutrap, MYSQLI_ASSOC)['sreforco']; 
+        
+                 
+
+         if (isset($resultTbLogin) ) {
+                    
+                     echo"<td>".$resultTbLogin."</td>";
+                  
+          }else{
+
+        $tabela = "tboutrap";
+          $coluna = "sreforco";
+          $selecta = "seleoutrap";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> "; 
+                  }
+                   echo" <input type='submit' name='cadastrar'>
+
+     </form>";
+
+          }
+          ?>   
+      
+        
+
+    </td>
+    
+        <?php
+         
+        $consultaoutras = mysqli_query ($conn, "SELECT sreforco FROM tboutras WHERE cpf= '$login_cookie'");
+
+      
+        $resultTbLogin = mysqli_fetch_array($consultaoutras, MYSQLI_ASSOC)['sreforco']; 
+        
+                 
+
+         if (isset($resultTbLogin) ) {
+                    
+                     echo"<td>".$resultTbLogin."</td>";
+                  
+                 }else{
+
+         $tabela = "tboutras";
+          $coluna = "sreforco";
+          $selecta = "seleoutras";
+          $select = "'".$selecta."'";
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+
+          echo" <input type='submit' name='cadastrar'>
+
+     </form>";
+        }
+
+          ?>   
+      
+        
+    </td>
+     
+        <?php
+       
+         $consultaoutrat = mysqli_query ($conn, "SELECT sreforco FROM tboutrat WHERE cpf= '$login_cookie'");
+
+      
+ $resultTbLogin = mysqli_fetch_array($consultaoutrat, MYSQLI_ASSOC)['sreforco']; 
+        
+                 
+
+                 if (isset($resultTbLogin) ) {
+                    
+                     echo"<td>".$resultTbLogin."</td>";
+                  
+                 }else{
+
+        $tabela = "tboutrat";
+          $coluna = "sreforco";
+          $selecta = "seleoutrat";
+          $select = "'".$selecta."'";
+
+
+           echo "<td class='tg-0lax'><form method='post' action='outraVacina.php?$cpf?$tabela?$coluna?$selecta' id=$select ><select name=$select form=$select>";
+         
+          $userquery = mysqli_query ($conn, "SELECT * FROM tbOutrasvacinas") or die ("the  query could not be completed. Try again later!"); 
+            $i=0;
+            while ($row = mysqli_fetch_array($userquery, MYSQLI_ASSOC)) {
+            
+              $nome = $row['nomeVacina'];
+              
+              $value = "'" . $nome . "'";
+                  echo "  <option value=$value>$nome</option> ";      
+          }
+
+          echo" <input type='submit' name='cadastrar'>
+
+     </form>";
+        }
+          
+
+          ?>   
+
+        
+          
+      
+    </td>
   </tr>
 </table>
 <?php   
@@ -450,6 +904,8 @@ $login_cookie = $_COOKIE['cpf'];
  ?>
 </table>
 
+
+
 <?php
 
 
@@ -463,6 +919,7 @@ $login_cookie = $_COOKIE['cpf'];
 
  ?>
 
+</style>
 </table>
 </body>
 </html>

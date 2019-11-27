@@ -9,7 +9,8 @@
 	$email = isset($_POST['txEmail'])? $_POST['txEmail'] :'';
 	$password = isset($_POST['txSenha'])? $_POST['txSenha'] :'';
 	$passwordRepeat = isset($_POST['txrepSenha'])? $_POST['txrepSenha']:'';
-	$pendente = 'pendente';
+	$pendente = "Pendente";
+	$outra = "";
 
 if (empty($cpf)||empty($nome)||empty($nascimento)||empty($email)||empty($password)||empty($passwordRepeat)) {
 
@@ -176,7 +177,7 @@ if (empty($cpf)||empty($nome)||empty($nascimento)||empty($email)||empty($passwor
 					exit();
 				}else{
 
-					mysqli_stmt_bind_param($stmt, "ssssss" ,  $pendente, $pendente, $pendente,$pendente, $pendente, $cpf);
+					mysqli_stmt_bind_param($stmt, "ssssss" ,  $outra, $outra, $outra,$outra, $outra, $cpf);
 				mysqli_stmt_execute($stmt);
                     
                     
@@ -194,7 +195,7 @@ if (empty($cpf)||empty($nome)||empty($nascimento)||empty($email)||empty($passwor
 					exit();
 				}else{
 
-					mysqli_stmt_bind_param($stmt, "ssssss" ,  $pendente, $pendente, $pendente,$pendente, $pendente, $cpf);
+					mysqli_stmt_bind_param($stmt, "ssssss" ,  $outra, $outra, $outra,$outra, $outra, $cpf);
 				mysqli_stmt_execute($stmt);
                     
                     
@@ -213,7 +214,7 @@ if (empty($cpf)||empty($nome)||empty($nascimento)||empty($email)||empty($passwor
 					exit();
 				}else{
 
-					mysqli_stmt_bind_param($stmt, "ssssss" ,  $pendente, $pendente, $pendente,$pendente, $pendente, $cpf);
+					mysqli_stmt_bind_param($stmt, "ssssss" ,  $outra, $outra, $outra,$outra, $outra, $cpf);
 				mysqli_stmt_execute($stmt);
                     
                     

@@ -38,6 +38,7 @@ $login_cookie = $_COOKIE['cpf'];
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf=8" />
 		<link rel="stylesheet" href="style.css">
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style type="text/css">
@@ -149,14 +150,38 @@ $login_cookie = $_COOKIE['cpf'];
 
       }
 
+$consultaoutrap = mysqli_query ($conn, "SELECT * FROM tboutrap WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrap, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['pdose']}</td>";
+    
+                 }
+
+      $consultaoutras = mysqli_query ($conn, "SELECT * FROM tboutras WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutras, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['pdose']}</td>";
+    
+                 }
+     
+    
+     $consultaoutrat = mysqli_query ($conn, "SELECT * FROM tboutrat WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrat, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['pdose']}</td>";
+      }
 
 
 ?>
     
 
-      <td class="tg-0lax"></td>
-      <td class="tg-0lax"></td>
-      <td class="tg-0lax"></td>
+      
     </tr>
     <tr>
     <td class="tg-baqh">2ª</td>
@@ -207,14 +232,38 @@ $login_cookie = $_COOKIE['cpf'];
 
       }
 
+$consultaoutrap = mysqli_query ($conn, "SELECT * FROM tboutrap WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrap, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['sdose']}</td>";
+    
+                 }
+
+      $consultaoutras = mysqli_query ($conn, "SELECT * FROM tboutras WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutras, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['sdose']}</td>";
+    
+                 }
+     
+    
+     $consultaoutrat = mysqli_query ($conn, "SELECT * FROM tboutrat WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrat, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['sdose']}</td>";
+      }
 
 
 ?>
 
 
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+   
   </tr>
   <tr>
     <td class="tg-baqh">3ª</td>
@@ -264,16 +313,39 @@ $login_cookie = $_COOKIE['cpf'];
 
 
       }
+$consultaoutrap = mysqli_query ($conn, "SELECT * FROM tboutrap WHERE cpf= '$login_cookie'");
 
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrap, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['tdose']}</td>";
+    
+                 }
+
+      $consultaoutras = mysqli_query ($conn, "SELECT * FROM tboutras WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutras, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['tdose']}</td>";
+    
+                 }
+     
+    
+     $consultaoutrat = mysqli_query ($conn, "SELECT * FROM tboutrat WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrat, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['tdose']}</td>";
+      }
 
 
 ?>
 
 
 
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+ 
   </tr>
   <tr>
     <td class="tg-baqh">Reforço</td>
@@ -324,15 +396,35 @@ $login_cookie = $_COOKIE['cpf'];
 
       }
 
+$consultaoutrap = mysqli_query ($conn, "SELECT * FROM tboutrap WHERE cpf= '$login_cookie'");
 
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrap, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['preforco']}</td>";
+    
+                 }
+
+      $consultaoutras = mysqli_query ($conn, "SELECT * FROM tboutras WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutras, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['preforco']}</td>";
+    
+                 }
+     
+    
+     $consultaoutrat = mysqli_query ($conn, "SELECT * FROM tboutrat WHERE cpf= '$login_cookie'");
+
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrat, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['preforco']}</td>";
+      }
 
 ?>
 
-
-
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
   </tr>
   <tr>
     <td class="tg-baqh">Reforço</td>
@@ -384,14 +476,34 @@ $login_cookie = $_COOKIE['cpf'];
 
       }
 
+    $consultaoutrap = mysqli_query ($conn, "SELECT * FROM tboutrap WHERE cpf= '$login_cookie'");
 
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrap, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['sreforco']}</td>";
+    
+                 }
 
-?>
+      $consultaoutras = mysqli_query ($conn, "SELECT * FROM tboutras WHERE cpf= '$login_cookie'");
 
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutras, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['sreforco']}</td>";
+    
+                 }
+     
+    
+     $consultaoutrat = mysqli_query ($conn, "SELECT * FROM tboutrat WHERE cpf= '$login_cookie'");
 
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+      
+      while ($resultTbLogin = mysqli_fetch_array($consultaoutrat, MYSQLI_ASSOC)){  
+        
+                   echo"<td>{$resultTbLogin['sreforco']}</td>";
+    
+                 }
+    ?>
   </tr>
 </table>
 <?php   
@@ -400,7 +512,7 @@ $login_cookie = $_COOKIE['cpf'];
 
       if (mysqli_num_rows($userquery) <= 0) {
 
-		die();
+		
 	}else{
   
 ?>
@@ -446,9 +558,82 @@ $login_cookie = $_COOKIE['cpf'];
  ?>
 </table>
 
+
+
 <?php
+      function curdate() {
+              // gets current timestamp
+              date_default_timezone_set('UTC'); // What timezone you want to be the default value for your current date.
+              return date('Y-m-d ');
+    }
 
+            
+    $dtAtual=curdate();
+    
 
+   $userquery2 = mysqli_query ($conn, "SELECT * FROM tbConsulta WHERE cpfCliente=$cpf and dataConsulta >= '$dtAtual' " ) or die ("the  query could not be completed. Try again later!");
+
+      if (mysqli_num_rows($userquery2) <= 0) {
+ 
+
+    die();
+  }else{
+  
+?>
+  <h1>Próximas consultas</h1>
+
+<table>
+  <tr>
+    <th>Local</th>
+    <th>Endereço</th>
+    <th>Data</th>
+    <th>Horário</th>
+    <th>Modalidade</th>
+    
+  </tr>
+  <?php
+
+  
+  while ($row = mysqli_fetch_array($userquery2, MYSQLI_ASSOC)) {
+  
+    $nomeHosp = $row['nomeHosp'];
+     
+    $a = $nomeHosp;
+    $dataConsulta = $row['dataConsulta'];
+    $dataConsulta = date('d/m/Y', strtotime($dataConsulta));
+    $horarioConsulta = $row['horarioConsulta'];
+    $nomeModal = $row['nomeModal'];
+    
+  
+        echo "  <tr>";
+        
+        //echo "<th><img src=" . $arquivo. "/></th>"; 
+        
+        echo "<th>". $nomeHosp ."</th>";
+        
+        $userquery3 = mysqli_query ($conn, "SELECT enderecoHosp FROM tbHospital WHERE nomeHosp = '$a' " ) or die ("the  query could not be completed. Try again later!");
+
+       while ($row2 = mysqli_fetch_array($userquery3, MYSQLI_ASSOC)) {
+    
+        $endereco = utf8_encode($row2['enderecoHosp']);
+    
+        echo "<th>". $endereco ."</th>";
+        echo "<th>". $dataConsulta ."</th>";        
+        echo "<th>" .$horarioConsulta. "</th>";
+        echo "<th>" .$nomeModal. "</th>";
+        //<img src='upload/$arquivo' alt="some text" width=60 height=40>
+
+        
+      
+        echo " </tr>";
+    
+     
+
+}}}
+ ?>
+</table>
+
+<?php
 
 }else{
       echo"Bem-Vindo, convidado <br>";
